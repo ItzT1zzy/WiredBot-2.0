@@ -1,0 +1,7 @@
+Шаблон админ команды:
+    @router.message(Command(commands=[""]))
+    async def cmd_name(message: Message):
+        if message.from_user.id in config.ADMIN_ID:
+            ...
+        else:
+            await message.answer("У вас нет прав для выполнения этого действия.")
